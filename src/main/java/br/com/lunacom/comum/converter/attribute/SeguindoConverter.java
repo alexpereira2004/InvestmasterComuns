@@ -1,8 +1,7 @@
 package br.com.lunacom.comum.converter.attribute;
 
 import br.com.lunacom.comum.domain.enumeration.Seguindo;
-
-import javax.persistence.AttributeConverter;
+import jakarta.persistence.AttributeConverter;
 
 public class SeguindoConverter implements AttributeConverter<Seguindo, String> {
 

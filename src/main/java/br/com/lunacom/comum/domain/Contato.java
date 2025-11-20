@@ -1,12 +1,12 @@
 package br.com.lunacom.comum.domain;
 
 import br.com.lunacom.comum.domain.enumeration.TipoContato;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 @Data

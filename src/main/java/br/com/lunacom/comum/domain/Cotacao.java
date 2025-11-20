@@ -1,8 +1,8 @@
 package br.com.lunacom.comum.domain;
 
-import br.com.lunacom.comum.domain.dto.CotacaoAgoraDto;
-import br.com.lunacom.comum.domain.dto.CotacaoHistoricoDto;
-import br.com.lunacom.comum.domain.dto.ExtratoCotacaoDto;
+import br.com.lunacom.portal.domain.dto.CotacaoAgoraDto;
+import br.com.lunacom.portal.domain.dto.CotacaoHistoricoDto;
+import br.com.lunacom.portal.domain.dto.ExtratoCotacaoDto;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,7 +1,7 @@
 package br.com.lunacom.comum.domain;
 
-import br.com.lunacom.comum.domain.dto.AtivoDividendoDto;
-import br.com.lunacom.comum.domain.dto.MediaDividendosValoresDto;
+import br.com.lunacom.portal.domain.dto.AtivoDividendoDto;
+import br.com.lunacom.portal.domain.dto.MediaDividendosValoresDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -80,7 +80,7 @@ import java.time.LocalDate;
         resultSetMapping = "AtivoDividendoMapping"
 )
 
-public class Dividendo extends BasicEntity<Dividendo>  {
+public class Dividendo extends br.com.lunacom.portal.domain.BasicEntity<Dividendo> {
 
     private LocalDate dataRecebimento;
     private String tipo;

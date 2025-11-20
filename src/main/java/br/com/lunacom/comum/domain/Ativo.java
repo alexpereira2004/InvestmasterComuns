@@ -1,5 +1,9 @@
 package br.com.lunacom.comum.domain;
 
+import br.com.lunacom.comum.converter.attribute.SeguindoConverter;
+import br.com.lunacom.comum.converter.attribute.StatusConverter;
+import br.com.lunacom.comum.domain.enumeration.Seguindo;
+import br.com.lunacom.comum.domain.enumeration.Status;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -7,6 +11,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -28,8 +33,13 @@ public class Ativo extends BasicEntity<Ativo> implements Serializable {
     private String tipo;
     private String pais;
     private String caminho;
-    private String seguindo;
+    @Convert(converter = SeguindoConverter.class)
+    private Seguindo seguindo;
     private String cnpj;
+    private LocalDateTime dataCriacao;
+    @Convert(converter = StatusConverter.class)
+    private Status status;
+    private String observacao;
 
     @OneToMany(mappedBy = "ativo")
     private List<Cotacao> cotacoes;

@@ -10,8 +10,8 @@ import java.util.List;
 @Data
 @Builder
 public class MediaDividendosDto {
-    private List<br.com.lunacom.portal.domain.dto.MediaDividendosValoresDto> total;
-    private List<br.com.lunacom.portal.domain.dto.MediaDividendosValoresDto> acoes;
-    private List<br.com.lunacom.portal.domain.dto.MediaDividendosValoresDto> fundos;
-    private List<br.com.lunacom.portal.domain.dto.MediaDividendosValoresDto> outros;
+    private List<MediaDividendosValoresDto> total;
+    private List<MediaDividendosValoresDto> acoes;
+    private List<MediaDividendosValoresDto> fundos;
+    private List<MediaDividendosValoresDto> outros;
 }

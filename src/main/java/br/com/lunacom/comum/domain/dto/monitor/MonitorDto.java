@@ -1,6 +1,6 @@
 package br.com.lunacom.comum.domain.dto.monitor;
 
-import br.com.lunacom.portal.domain.entity.monitor.Monitor;
+import br.com.lunacom.comum.domain.entity.monitor.Monitor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

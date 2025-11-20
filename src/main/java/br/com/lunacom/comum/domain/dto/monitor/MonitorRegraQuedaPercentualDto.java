@@ -1,7 +1,7 @@
 package br.com.lunacom.comum.domain.dto.monitor;
 
 
-import br.com.lunacom.portal.domain.entity.monitor.MonitorRegraQuedaPercentual;
+import br.com.lunacom.comum.domain.entity.monitor.MonitorRegraQuedaPercentual;
 
 public class MonitorRegraQuedaPercentualDto {
     private Double percentualQueda;

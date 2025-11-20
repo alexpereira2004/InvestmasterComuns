@@ -1,6 +1,6 @@
 package br.com.lunacom.comum.domain.dto.monitor;
 
-import br.com.lunacom.portal.domain.entity.monitor.MonitorRegraCruzamentoMedia;
+import br.com.lunacom.comum.domain.entity.monitor.MonitorRegraCruzamentoMedia;
 
 public class MonitorRegraCruzamentoMediaDto {
     private Integer mediaCurta;

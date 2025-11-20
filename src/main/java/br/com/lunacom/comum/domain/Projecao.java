@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Projecao extends br.com.lunacom.portal.domain.BasicEntity<Projecao> implements Serializable {
+public class Projecao extends BasicEntity<Projecao> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id

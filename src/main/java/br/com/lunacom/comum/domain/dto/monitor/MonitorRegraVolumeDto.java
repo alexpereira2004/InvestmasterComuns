@@ -1,6 +1,6 @@
 package br.com.lunacom.comum.domain.dto.monitor;
 
-import br.com.lunacom.portal.domain.entity.monitor.MonitorRegraVolume;
+import br.com.lunacom.comum.domain.entity.monitor.MonitorRegraVolume;
 
 public class MonitorRegraVolumeDto {
     private Integer volumeMinimo;

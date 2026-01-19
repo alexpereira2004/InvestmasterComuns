@@ -51,5 +51,10 @@ public class Ativo extends BasicEntity<Ativo> implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "indice_id"))
     Set<Indice> indices;
 
-
+    @Override
+    public String toString() {
+        return "Ativo{" +
+                "id=" + id +
+                '}';
+    }
 }

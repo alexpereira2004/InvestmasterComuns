@@ -34,6 +34,12 @@ public class Monitor extends BasicEntity<Monitor> implements Serializable {
     @Column(name = "data_criacao")
     private LocalDateTime dataCriacao;
 
+    @Override
+    public String toString() {
+        return "Monitor{" +
+                "id=" + id +
+                '}';
+    }
 
 }
 

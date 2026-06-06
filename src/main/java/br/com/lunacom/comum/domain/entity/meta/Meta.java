@@ -1,13 +1,22 @@
-package br.com.lunacom.comum.domain;
+package br.com.lunacom.comum.domain.entity.meta;
 
+import br.com.lunacom.comum.domain.GenericEntity;
 import jakarta.persistence.*;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class Meta {
+@Builder
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "meta")
+public class Meta implements GenericEntity<Meta> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,14 +39,10 @@ public class Meta {
     @Column(name = "usuario_id", nullable = false)
     private Integer usuarioId;
 
-    /*
-     * Mapeamento Nativo de JSON para o Hibernate 6 (Spring Boot 3.x).
-     * Você pode mapear este campo como String (contendo o texto cru do JSON)
-     * ou criar uma classe POJO (ex: MetaMetadata) para o Jackson deserializar automaticamente.
-     */
-    @JdbcTypeCode(SqlTypes.JSON)
-    @Column(name = "metadata")
-    private String metadata;
+
+    @Column(name = "metadata", columnDefinition = "TEXT") // ou "json" dependendo do dialeto do banco
+    @Convert(converter = MetaMetadataConverter.class)
+    private MetadataInterface metadata;
 
     @Column(name = "data_criacao", nullable = false, updatable = false)
     private LocalDateTime dataCriacao;
@@ -54,4 +59,5 @@ public class Meta {
     protected void onUpdate() {
         this.dataAtualizacao = LocalDateTime.now();
     }
+
 }

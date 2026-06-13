@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 )
 @JsonSubTypes({
         @JsonSubTypes.Type(value = MetaFinanceira.class, name = "FINANCEIRA"),
-        @JsonSubTypes.Type(value = MetaPessoal.class, name = "PESSOAL")
+        @JsonSubTypes.Type(value = MetaPessoal.class, name = "PESSOAL"),
+        @JsonSubTypes.Type(value = TotalInvestido.class, name = "TOTAL_INVESTIDO")
 })
 public interface MetadataInterface { }
